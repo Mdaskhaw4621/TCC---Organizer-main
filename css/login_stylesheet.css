@@ -1,0 +1,48 @@
+body{
+    height:100%;
+    position: absolute;
+}
+
+#w-card-login{
+    width: 40%;
+    height: 50%;
+    display: flex;
+}
+
+.container{
+    width: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(236, 234, 234, 0.774);
+}
+.container-fluid {
+    height: 100%; 
+    background-color: rgba(236, 234, 234, 0.774); 
+}
+
+.card-space-login{
+    display: flex;
+
+    margin-top: 45%; 
+}
+
+
+/*Rodapé
+.water-footer {
+    margin-top: 1rem;
+    padding: 1rem 0;
+    color: #999;
+    background-color: #f9f9f9;
+    border-top: .05rem solid #e5e5e5;
+    
+}
+
+.water-footer p:last-child {
+    margin-bottom: 0px;
+}
+
+.water-footer a:link{
+    text-decoration: none;
+}*/

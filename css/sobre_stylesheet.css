@@ -1,0 +1,55 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100%;
+    height:100%;
+    background-color: #049CD8;
+    background-color: rgba(236, 234, 234, 0.774);
+}
+
+/*Icones*/
+.fas{
+    color: #0487D8; 
+}
+/*Conteudo*/
+.container{
+    padding: 50px 20px;
+}
+.container-fluid{
+    padding: 130px 120px;
+}
+@media screen and (max-width: 768px) {
+    .col-md-4 {
+        text-align: center;
+        margin: 25px 0;
+}
+}
+.col-lg-12{
+    margin: 15px 0;
+}
+
+/*Rodapé*/
+.water-footer {
+    margin-top: 1rem;
+    padding: 1rem 0;
+    color: #999;
+    background-color: #f9f9f9;
+    border-top: .05rem solid #e5e5e5;
+    
+}
+
+.water-footer p:last-child {
+    margin-bottom: 0;
+}
+
+.water-footer a:link{
+    text-decoration: none;
+}
+/*.btn-back-top{
+    border-radius: 50%;
+    background-color: #999;
+    padding: 11px 15px;
+}*/
+

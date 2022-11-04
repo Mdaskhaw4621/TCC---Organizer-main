@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=chrome">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        <link rel="stylesheet" href="../css/index_stylesheet.css">
+
+        <title>Oganizer: Easilying your Life</title>
+    </head>
+    <body>
+        <div class="container">
+            <span id="span_jumb" class="fa fa-volume-up mt-5" aria-hidden="true"></span>
+            <h1 class="display-5 fw-bold d-flex justify-content-center">Organizer</h1>
+            <h2 class="d-flex justify-content-center m-5">Aqui você pode cadastrar seus itens</h2>
+            <div class="card-space-login m-5">
+                <div id="w-card-login" class="card pb-5 mx-auto">
+                    <div class="card-header">
+                        Cadastro de Produtos
+                    </div>
+                    <div class="card-body ">
+                        <form>
+                            <div class="form-floating mt-2 mb-3">
+                                <input type="text" class="form-control" id="tipo_produto" aria-describedby="emailHelp" placeholder="Informe o tipo de produto" required>
+                                <label for="tipo_produto">Tipo de Produto</label>
+                            </div>
+                            
+                            <div class="form-floating mb-3">                               
+                                <input type="text" class="form-control" id="nome_produto" aria-describedby="emailHelp" placeholder="Informe o nome do produto" required>
+                                <label for="nome_produto">Nome do Produto</label>
+                            </div>
+                                                        
+                            <div class="form-floating mb-3">
+                                <textarea class="form-control" placeholder="Coloque uma breve descrição aqui" id="floatingTextarea"></textarea>
+                                <label for="floatingTextarea">Descrição do produto </label>
+                            </div>
+
+                            <div class="d-grid gap-2 pt-3">
+                                <button class="btn btn-success" type="button">Cadastrar Produto</button>
+                                <button class="btn btn btn-warning" type="button">Limpar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>  
+            </div>   
+        </div>
+        
+      
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </body>
+</html>
