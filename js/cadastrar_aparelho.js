@@ -15,11 +15,12 @@ function Cadastrar(data){
           if(response.status == 200){
             alert("Aparelho Cadastrado com Sucesso!!");
             //window.location.href="../pages/login.html";
+          } else{
+            alert("Falha no Cadastrado do Aparelho!!");
           }
         })
       .then(json => console.log(json))
       .catch(
-        alert("Falha no Cadastrado do Aparelho!!"),
         err =>console.log(err)
       )
   }
