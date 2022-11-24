@@ -29,7 +29,7 @@ function Cadastrar(data){
     e.preventDefault();
     const nome_usuario = loginForm.nome_usuario.value;
     const formato = loginForm.flexRadioDefault.value;
-    const data = {"nome": nome_usuario, "formato": formato}
+    const data = {"idUsuario": 1, "nome": nome_usuario, "formato": formato}
     Cadastrar(data);
     //if (Autenticar(data) == 200){
     //    alert("You have successfully logged in.");

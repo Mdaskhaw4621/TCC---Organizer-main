@@ -55,13 +55,12 @@ function show(data) {
       
       const cell4 = document.createElement("td");
       const cellText1 = document.createTextNode(data.data[i].codigo);
-      
       const cellText4 = document.createTextNode(data.data[i].formato);
       cell1.appendChild(cellText1);
- 
+     
       cell4.appendChild(cellText4);
       row.appendChild(cell1);
-    
+     
       row.appendChild(cell4);
 
     }
