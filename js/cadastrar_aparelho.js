@@ -36,4 +36,11 @@ function Cadastrar(data){
     //    alert("You have successfully logged in.");
     //    window.location.href="../index.html";
     //}
+    
+})
+
+cancelarButton.addEventListener("click", (e) => {
+  e.preventDefault();
+    loginForm.nome_usuario.value = "";
+    loginForm.indent_usuario.value = "";
 })

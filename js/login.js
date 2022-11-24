@@ -12,10 +12,19 @@ function Autenticar(data){
           response.json();
           if(response.status == 200){
             alert("You have successfully logged in.");
-            window.location.href="../index.html";
-          }
+            
+          
+            //window.location.href="pages/home.html";
+            
+            }
         })
-      .then(json => console.log(json))
+      .then(json => { 
+          console.log(json);
+            
+               var myContent = json.text();
+              localStorage.setItem("myContent", myContent);
+              console.log(localStorage.getItem("myContent"));
+    })
       .catch(
         err =>console.log(err)
       )
@@ -40,7 +49,7 @@ loginButton.addEventListener("click", (e) => {
 
 cadastrarRedirectButton.addEventListener("click", (e) => {
   e.preventDefault();
-    window.location.href="../pages/cadastrar_users.html";
+    window.location.href="pages/cadastrar_users.html";
 })
 
 
