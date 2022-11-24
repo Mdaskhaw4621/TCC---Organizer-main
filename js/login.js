@@ -1,44 +1,38 @@
 
 //Ações da página de login
 
-function Autenticar(data){
-    fetch('https://ooda.azurewebsites.net/Usuario/Autenticar', {
-        method: "POST",
-        body: JSON.stringify(data),
-        headers: {"Content-type": "application/json; charset=UTF-8"}
-      })
-      .then(
-        response =>{ 
-          response.json();
-          if(response.status == 200){
-            alert("You have successfully logged in.");
-            window.location.href="pages/home.html";
-            
-            }
-        })
-      .then(json => { 
-          console.log(json);
-            
-               var myContent = json.text();
-              localStorage.setItem("myContent", myContent);
-              console.log(localStorage.getItem("myContent"));
-    })
-      .catch(
-        err =>console.log(err)
-      )
+
+async function Autenticar(data) {
+	const response = await fetch(
+		'https://ooda.azurewebsites.net/Usuario/Autenticar', 
+		{
+			method: "POST",
+			body: JSON.stringify(data),
+      headers: {"Content-type": "application/json; charset=UTF-8"}
+		}
+	);
+	if (!response.ok) {
+		throw new Error(`HTTP error! status: ${response.status}`);
+	}
+	const dataResponse = await response.json();
+  window.localStorage.setItem("token", dataResponse.token)
+  alert("You have successfully logged in.");
+  window.location.href="pages/home.html";
+
 }
+
 
 
 const loginForm = document.getElementById("login-form");
 const loginButton = document.getElementById("login-submit");
 const cadastrarRedirectButton = document.getElementById("cadastrar-usuario");
 
-loginButton.addEventListener("click", (e) => {
+loginButton.addEventListener("click", async (e) => {
     e.preventDefault();
     const email = loginForm.email.value;
     const password = loginForm.senha.value;
     const data = {"login": email, "senha": password}
-    Autenticar(data);
+    await Autenticar(data);
     //if (Autenticar(data) == 200){
     //    alert("You have successfully logged in.");
     //    window.location.href="../index.html";
