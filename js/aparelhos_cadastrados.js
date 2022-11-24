@@ -52,20 +52,16 @@ function show(data) {
       // node the contents of the <td>, and put the <td> at
       // the end of the table row
       const cell1 = document.createElement("td");
-      const cell2 = document.createElement("td");
-      const cell3 = document.createElement("td");
+      
       const cell4 = document.createElement("td");
       const cellText1 = document.createTextNode(data.data[i].codigo);
-      const cellText2 = document.createTextNode(data.data[i].usuario);
-      const cellText3 = document.createTextNode(data.data[i].nome);
+      
       const cellText4 = document.createTextNode(data.data[i].formato);
       cell1.appendChild(cellText1);
-      cell2.appendChild(cellText2);
-      cell3.appendChild(cellText3);
+ 
       cell4.appendChild(cellText4);
       row.appendChild(cell1);
-      row.appendChild(cell2);
-      row.appendChild(cell3);
+    
       row.appendChild(cell4);
 
     }

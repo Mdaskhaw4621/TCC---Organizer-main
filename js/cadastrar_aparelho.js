@@ -27,10 +27,9 @@ function Cadastrar(data){
 
   cadastrarButton.addEventListener("click", (e) => {
     e.preventDefault();
-    const id_usuario = Number.parseInt(loginForm.indent_usuario.value);
     const nome_usuario = loginForm.nome_usuario.value;
     const formato = loginForm.flexRadioDefault.value;
-    const data = {"idUsuario": id_usuario, "nome": nome_usuario, "formato": formato}
+    const data = {"nome": nome_usuario, "formato": formato}
     Cadastrar(data);
     //if (Autenticar(data) == 200){
     //    alert("You have successfully logged in.");

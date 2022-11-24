@@ -16,7 +16,7 @@ async function Autenticar(data) {
 	}
 	const dataResponse = await response.json();
   window.localStorage.setItem("token", dataResponse.token)
-  alert("You have successfully logged in.");
+  
   window.location.href="pages/home.html";
 
 }
