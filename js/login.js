@@ -12,9 +12,7 @@ function Autenticar(data){
           response.json();
           if(response.status == 200){
             alert("You have successfully logged in.");
-            
-          
-            //window.location.href="pages/home.html";
+            window.location.href="pages/home.html";
             
             }
         })
