@@ -3,9 +3,20 @@ const api_url =
   
 // Defining async function
 async function getapi(url) {
-    
+    console.log('teste')
+    const response = await fetch(
+		api_url, 
+		{
+			method: "GET",
+            headers: {
+                "Content-type": "application/json; charset=UTF-8",
+                "Authorization":"Bearer " + localStorage.getItem('token')
+            }
+		}
+	);
+    console.log(response)
     // Storing response
-    const response = await fetch(url);
+    // const response = await fetch(url);
     
     // Storing data in form of JSON
     var data = await response.json();
