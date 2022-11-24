@@ -10,9 +10,12 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
         <link rel="stylesheet" href="../css/index_stylesheet.css">
 
-        <title>Oganizer: Easilying your Life</title>
+        <title>Oganizer: Facilitando sua vida</title>
     </head>
     <body>
+        <div class="btn-group-vertical gap-2 justify-content-center">
+            <a class="btn btn-outline-primary text-decoration-none" href="../pages/home.html">Voltar</a>
+        </div>
         <div class="container">
             <span id="span_jumb" class="fa fa-volume-up mt-5" aria-hidden="true"></span>
             <h1 class="display-5 fw-bold d-flex justify-content-center">Organizer</h1>
@@ -26,7 +29,7 @@
                         <form id="cadastrar-aparelho-form">
                             <div class="form-floating mt-2 mb-3">
                                 <input type="number" class="form-control" id="indent_usuario" aria-describedby="emailHelp" placeholder="Informe o tipo de produto" required>
-                                <label for="indent_usuario">ID do Usuário</label>
+                                <label for="indent_usuario">ID do Usuário (Somente Números)</label>
                             </div>
                         
                             <div class="form-floating mb-3">                               
@@ -56,7 +59,7 @@
 
                             <div class="d-grid gap-2 pt-3">
                                 <button id="btn-cadastrar-aparelho" class="btn btn-success" type="button">Cadastrar Aparelho</button>
-                                <button id="btn-cancelar" class="btn btn btn-warning" type="button">Cancelar</button>
+                                <button id="btn-cancelar" class="btn btn btn-warning" type="button">Limpar</button>
                             </div>
                         </form>
                     </div>

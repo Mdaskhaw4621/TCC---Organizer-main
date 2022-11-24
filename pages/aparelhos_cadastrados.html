@@ -12,15 +12,19 @@
     
     <link rel="stylesheet" href="../css/index_stylesheet.css">
 
-    <title>Oganizer: Easilying your Life</title>
+    <title>Oganizer: Facilitando sua vida</title>
 </head>
 
 <body>
-
+    <div class="btn-group-vertical gap-2 justify-content-center">
+        <a class="btn btn-outline-primary text-decoration-none" href="../pages/home.html">Voltar</a>
+    </div>
+    
     <div class="container">
+        
         <span id="span_jumb" class="fa fa-volume-up mt-5" aria-hidden="true"></span>
         <h1 class="display-5 fw-bold d-flex justify-content-center">Organizer</h1>
-        <h2 class="d-flex justify-content-center mb-5">Itens Cadastrados</h2>
+        <h2 class="d-flex justify-content-center mb-5">Aqui você verifica os aparelhos cadastrados</h2>
 
         <div class="d-flex justify-content-center">
             <div class="spinner-border" 
@@ -29,38 +33,22 @@
             </div>
         </div>
         
-        <div class="container-fluid py-5">
-            <table id="info_table"></table>
-        </div>
-
-
-       <!-- <div class="m-3">
-            <table class="table table-hover">
+       <div class="m-3">
+            <table id="myTable" class="table table-hover">
                 <thead>
                     <tr>
                         <th scope="col">#Id</th>
-                        <th scope="col">Tipo</th>
+                        <th scope="col">Usuario</th>
                         <th scope="col">Nome</th>
-                        <th scope="col">Descrição</th>
+                        <th scope="col">Tipo do Organizador</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Shampoo</td>
-                        <td>Elseve L'oreal</td>
-                        <td>Cuidado Capilar</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Higiene Bucal</td>
-                        <td>Escova de Dentes</td>
-                        <td>Escova do João Pedro</td>
-                    </tr>
+                <tbody id="add_info">
                 </tbody>
             </table>
         </div>
-    </div>-->
+    </div>
+    
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -71,6 +59,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
-</body>
+    <script src="../js/aparelhos_cadastrados.js"></script>
+    </body>
 
 </html>

@@ -1,11 +1,19 @@
 const api_url = 
-      "https://ooda.azurewebsites.net/Aparelho/NotificacaoUsuario";
+      "https://ooda.azurewebsites.net/Aparelho/AparelhoPorUsuario";
   
 // Defining async function
 async function getapi(url) {
-    
-    // Storing response
-    const response = await fetch(url);
+  console.log('teste')
+  const response = await fetch(
+  api_url, 
+  {
+    method: "GET",
+          headers: {
+              "Content-type": "application/json; charset=UTF-8",
+              "Authorization":"Bearer " + localStorage.getItem('token')
+          }
+  }
+);
     
     // Storing data in form of JSON
     var data = await response.json();
@@ -15,36 +23,64 @@ async function getapi(url) {
     }
     show(data);
 }
+
 // Calling that async function
 getapi(api_url);
-  
+
 // Function to hide the loader
 function hideloader() {
     document.getElementById('loading').style.display = 'none';
 }
 // Function to define innerHTML for HTML table
 function show(data) {
-  let tab = 
-  `<tr>
-    <th>Codigo</th>
-    <th>Formato</th>
-    <th>Usuario</th>
-   </tr>`;
- },
-// Loop to access all rows 
-for (let r of data.list) {
-  tab += `<tr> 
-<td>${r.codigo} </td>
-<td>${r.formato}</td>
-<td>${r.usuario}: null,
-}</td> 
-       
-</tr>`;
-    }
-    // Setting innerHTML as tab variable
-    document.getElementById("info_table").innerHTML = tab;
-}
+  
+  const info2 = data.data[0].usuario;
+  const info3 = data.data[0].nome;
+  const info4 = data.data[0].formato;
 
+  const tbl = document.getElementById("myTable");
+  const tblBody = document.getElementById("add_info");
+
+  // creating all cells
+  for (let i = 0; i < data.data.length; i++) {
+    // creates a table row
+    const row = document.createElement("tr");
+    
+    for (let j = 0; j < 1; j++) {
+      
+      // Create a <td> element and a text node, make the text
+      // node the contents of the <td>, and put the <td> at
+      // the end of the table row
+      const cell1 = document.createElement("td");
+      const cell2 = document.createElement("td");
+      const cell3 = document.createElement("td");
+      const cell4 = document.createElement("td");
+      const cellText1 = document.createTextNode(data.data[i].codigo);
+      const cellText2 = document.createTextNode(data.data[i].usuario);
+      const cellText3 = document.createTextNode(data.data[i].nome);
+      const cellText4 = document.createTextNode(data.data[i].formato);
+      cell1.appendChild(cellText1);
+      cell2.appendChild(cellText2);
+      cell3.appendChild(cellText3);
+      cell4.appendChild(cellText4);
+      row.appendChild(cell1);
+      row.appendChild(cell2);
+      row.appendChild(cell3);
+      row.appendChild(cell4);
+
+    }
+
+    // add the row to the end of the table body
+    tblBody.appendChild(row);
+  }
+
+  // put the <tbody> in the <table>
+  tbl.appendChild(tblBody);
+  // appends <table> into <body>
+  document.body.appendChild(tbl);
+  
+}
+ 
 
 /**const url = 'https://ooda.azurewebsites.net/Aparelho/AparelhoPorUsuario';
 

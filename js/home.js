@@ -20,6 +20,7 @@ async function getapi(url) {
     
     // Storing data in form of JSON
     var data = await response.json();
+    
     console.log(data);
     if (response) {
         hideloader();
@@ -35,17 +36,23 @@ function hideloader() {
 }
 // Function to define innerHTML for HTML table
 function show(data) {
-    let tab = 
-        `<tr>
-          <th>Status</th>
-         </tr>`;
-    
+
+    const info1 = data.data[0];
+    const info2 = data.data[1];
+    const info3 = data.data[2];
+    const info4 = data.data[3];
+
+    document.getElementById("info1").innerHTML = info1;
+    document.getElementById("info2").innerHTML = info2;
+    document.getElementById("info3").innerHTML = info3;
+    document.getElementById("info4").innerHTML = info4;
+
     // Loop to access all rows 
-    for (let r of data.list) {
+   /* for (let r of data) {
         tab += `<tr> 
-    <td>${r} </td>        
-</tr>`;
-    }
+            <td>${r} </td>        
+        </tr>`;
+    }*/
     // Setting innerHTML as tab variable
-    document.getElementById("info_table").innerHTML = tab;
+    
 }
